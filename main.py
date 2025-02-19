@@ -162,7 +162,9 @@ async def show_offers(message: types.Message):
             response += f"{offer['Name']}: {offer['Price']}р.\n {offer['Link']}\n\n\n"
         await message.answer(response)
     else:
-        await message.answer("Халява пока что отсутствует\nЖдём выгодных предложений)")
+        await message.answer("Халява пока что отсутствует\nЖдём выгодных предложений)\n\nПока ждёшь снижение цен на официальном сайте, можешь глянуть страницы на маркетплейсах" +
+                             " (частенько на них цены вкуснее)\n\nOzon:\nhttps://www.ozon.ru/seller/imba-105758/products/?miniapp=seller_105758\n\n" +
+                             "Yandex.Market:\nhttps://market.yandex.ru/business--imba/1017902")
 
 async def main():
     asyncio.create_task(parcer())
